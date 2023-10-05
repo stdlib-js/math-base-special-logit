@@ -31,9 +31,9 @@ var logit = require( './../../dist' );
 
 // FIXTURES //
 
-var small = require( './../..xtures/python/small.json' );
-var medium = require( './../..xtures/python/medium.json' );
-var large = require( './../..xtures/python/large.json' );
+var small = require( './../fixtures/python/small.json' );
+var medium = require( './../fixtures/python/medium.json' );
+var large = require( './../fixtures/python/large.json' );
 
 
 // TESTS //

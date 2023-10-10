@@ -65,6 +65,11 @@ The [logit][logit] function is the inverse of the [standard logistic][standard-l
 ## Usage
 
 ```javascript
+import logit from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-logit@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/math-base-special-logit/tags). For example,
+
+```javascript
 import logit from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-logit@v0.1.1-esm/index.mjs';
 ```
 
@@ -107,7 +112,7 @@ v = logit( -0.2 );
 <script type="module">
 
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/index.mjs';
-import logit from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-logit@v0.1.1-esm/index.mjs';
+import logit from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-logit@esm/index.mjs';
 
 var p;
 var i;

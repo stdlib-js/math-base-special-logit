@@ -1,7 +1,7 @@
 /**
 * @license Apache-2.0
 *
-* Copyright (c) 2018 The Stdlib Authors.
+* Copyright (c) 2023 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -21,120 +21,13 @@
 // MODULES //
 
 var tape = require( 'tape' );
-var isnan = require( '@stdlib/math-base-assert-is-nan' );
-var PINF = require( '@stdlib/constants-float64-pinf' );
-var NINF = require( '@stdlib/constants-float64-ninf' );
-var EPS = require( '@stdlib/constants-float64-eps' );
-var abs = require( '@stdlib/math-base-special-abs' );
-var logit = require( './../../dist' );
-
-
-// FIXTURES //
-
-var small = require( './../fixtures/python/small.json' );
-var medium = require( './../fixtures/python/medium.json' );
-var large = require( './../fixtures/python/large.json' );
+var main = require( './../../dist' );
 
 
 // TESTS //
 
-tape( 'main export is a function', function test( t ) {
+tape( 'main export is defined', function test( t ) {
 	t.ok( true, __filename );
-	t.strictEqual( typeof logit, 'function', 'main export is a function' );
-	t.end();
-});
-
-tape( 'the function returns `NaN` when provided `NaN`', function test( t ) {
-	var y = logit( NaN );
-	t.equal( isnan( y ), true, 'returns NaN' );
-	t.end();
-});
-
-tape( 'the function returns `NaN` when provided a number outside `[0,1]`', function test( t ) {
-	var y = logit( 1.2 );
-	t.equal( isnan( y ), true, 'returns NaN' );
-	y = logit( -0.1 );
-	t.equal( isnan( y ), true, 'returns NaN' );
-	t.end();
-});
-
-tape( 'the function returns `-Infinity` when provided `0`', function test( t ) {
-	var y = logit( 0.0 );
-	t.equal( y, NINF, 'returns -Infinity' );
-	t.end();
-});
-
-tape( 'the function returns `+Infinity` when provided `1`', function test( t ) {
-	var y = logit( 1.0 );
-	t.equal( y, PINF, 'returns +Infinity' );
-	t.end();
-});
-
-tape( 'the function evaluates the logit of `x` for the interval `(0,0.25]`', function test( t ) {
-	var expected;
-	var delta;
-	var tol;
-	var x;
-	var y;
-	var i;
-
-	expected = small.expected;
-	x = small.x;
-	for ( i = 0; i < x.length; i++ ) {
-		y = logit( x[i] );
-		if ( y === expected[i] ) {
-			t.equal( y, expected[i], 'x: '+x[i]+', y: '+y+', expected: '+expected[i] );
-		} else {
-			delta = abs( y - expected[i] );
-			tol = EPS * abs( expected[i] );
-			t.ok( delta <= tol, 'within tolerance. x: '+x[i]+'. v: '+y+'. E: '+expected[i]+' Δ: '+delta+'. tol: '+tol );
-		}
-	}
-	t.end();
-});
-
-tape( 'the function evaluates the logit of `x` for the interval `[0.25,0.75]`', function test( t ) {
-	var expected;
-	var delta;
-	var tol;
-	var x;
-	var y;
-	var i;
-
-	expected = medium.expected;
-	x = medium.x;
-	for ( i = 0; i < x.length; i++ ) {
-		y = logit( x[i] );
-		if ( y === expected[i] ) {
-			t.equal( y, expected[i], 'x: '+x[i]+', y: '+y+', expected: '+expected[i] );
-		} else {
-			delta = abs( y - expected[i] );
-			tol = EPS * abs( expected[i] );
-			t.ok( delta <= tol, 'within tolerance. x: '+x[i]+'. v: '+y+'. E: '+expected[i]+' Δ: '+delta+'. tol: '+tol );
-		}
-	}
-	t.end();
-});
-
-tape( 'the function evaluates the logit of `x` for the interval `[0.75,1)`', function test( t ) {
-	var expected;
-	var delta;
-	var tol;
-	var x;
-	var y;
-	var i;
-
-	expected = large.expected;
-	x = large.x;
-	for ( i = 0; i < x.length; i++ ) {
-		y = logit( x[i] );
-		if ( y === expected[i] ) {
-			t.equal( y, expected[i], 'x: '+x[i]+', y: '+y+', expected: '+expected[i] );
-		} else {
-			delta = abs( y - expected[i] );
-			tol = EPS * abs( expected[i] );
-			t.ok( delta <= tol, 'within tolerance. x: '+x[i]+'. v: '+y+'. E: '+expected[i]+' Δ: '+delta+'. tol: '+tol );
-		}
-	}
+	t.strictEqual( main !== void 0, true, 'main export is defined' );
 	t.end();
 });

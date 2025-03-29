@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-03-02)
+## Unreleased (2025-03-29)
 
 <section class="reverts">
 
@@ -34,6 +34,7 @@ This release closes the following issue:
 
 <details>
 
+-   [`07b51a4`](https://github.com/stdlib-js/stdlib/commit/07b51a4996fa515e6a2595413027b1fa670f7503) - **bench:** update random value generation [(#6378)](https://github.com/stdlib-js/stdlib/pull/6378) _(by Harsh, Philipp Burckhardt)_
 -   [`fab250c`](https://github.com/stdlib-js/stdlib/commit/fab250c7a179fa8aee1321fba6df32266f82c184) - **style:** fix lint errors [(#5416)](https://github.com/stdlib-js/stdlib/pull/5416) _(by Krishnam Agarwal)_
 -   [`6a0d6b8`](https://github.com/stdlib-js/stdlib/commit/6a0d6b861f8e2079a501ca4e46a9175440eedb46) - **style:** update to use tabs for indentation _(by Philipp Burckhardt)_
 -   [`f13ddb2`](https://github.com/stdlib-js/stdlib/commit/f13ddb2eb01e5520b6fa98634bbf9de76793036f) - **style:** use spaces for alignment in C comments _(by Philipp Burckhardt)_
@@ -52,9 +53,10 @@ This release closes the following issue:
 
 ### Contributors
 
-A total of 3 people contributed to this release. Thank you to the following contributors:
+A total of 4 people contributed to this release. Thank you to the following contributors:
 
 -   Athan Reines
+-   Harsh
 -   Krishnam Agarwal
 -   Philipp Burckhardt
 

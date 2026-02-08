@@ -65,7 +65,7 @@ The [logit][logit] function is the inverse of the [standard logistic][standard-l
 ## Usage
 
 ```javascript
-import logit from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-logit@deno/mod.js';
+import logit from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-logit@v0.2.4-deno/mod.js';
 ```
 
 #### logit( p )
@@ -103,7 +103,7 @@ v = logit( -0.2 );
 ```javascript
 import uniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-uniform@deno/mod.js';
 import logEachMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@deno/mod.js';
-import logit from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-logit@deno/mod.js';
+import logit from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-logit@v0.2.4-deno/mod.js';
 
 var opts = {
     'dtype': 'float64'
